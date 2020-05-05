@@ -30,7 +30,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
   result.data.allContentfulVuist.edges.forEach(({ node }) => {
     createPage({
-      path: node.id,
+      path: `vuistje/${node.id}`,
       component: vuistPost,
       context: {
         id: node.id,
