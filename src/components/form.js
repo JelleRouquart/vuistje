@@ -2,7 +2,7 @@ import React from "react"
 
 import style from "./form.module.css"
 
-const Form = () => {
+const Form =  () => {
   return (
     <form method="POST" action="/post" className={style.form}>
       <label htmlFor="to" className={style.wrapper}>
