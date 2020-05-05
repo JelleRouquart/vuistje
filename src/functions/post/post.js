@@ -10,7 +10,7 @@ require("dotenv").config({
 })
 
 const client = contentful.createClient({
-  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+  accessToken: process.env.CONTENTFUL_MANAGEMENT_TOKEN,
 })
 
 exports.handler = async function(event, context, callback) {
