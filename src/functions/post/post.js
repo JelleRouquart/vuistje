@@ -37,10 +37,13 @@ exports.handler = async function(event, context, callback) {
 
     await entry.publish();
 
-    return {
-      statusCode: 200,
-      body: JSON.stringify({ msg: "oke" }),
-    }
+    return callback(null, {
+      body: JSON.stringify(entry.fields),
+      statusCode: 302,
+      headers: {
+        Location: `/vuistje/${vuistje.id}`,
+      },
+    })
   } catch (err) {
     console.log(err) // output to netlify function log
     return {
