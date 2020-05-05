@@ -3,6 +3,7 @@
 // importen van deps
 const shortid = require("shortid")
 const querystring = require("querystring")
+const contentful = require("contentful-management")
 
 require("dotenv").config({
   path: `.env.${process.env.NODE_ENV}`,
@@ -12,7 +13,7 @@ const client = contentful.createClient({
   accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
 })
 
-exports.handler = async function(event, context) {
+exports.handler = async function(event, context, callback) {
   try {
       // destructuren van 'link' post data
     const vuistje = querystring.parse(event.body);
