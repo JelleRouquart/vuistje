@@ -4,6 +4,7 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
+  const vuistPost = path.resolve(`./src/templates/vuistje.js`)
   const result = await graphql(
     `
       {
@@ -30,7 +31,7 @@ exports.createPages = async ({ graphql, actions }) => {
   result.data.allContentfulVuist.edges.forEach(({ node }) => {
     createPage({
       path: node.id,
-      component: path.resolve(`./src/templates/vuistje.js`),
+      component: vuistPost,
       context: {
         id: node.id,
         from: node.from,
