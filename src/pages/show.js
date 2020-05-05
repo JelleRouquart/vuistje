@@ -8,10 +8,10 @@ import SEO from "../components/seo"
 
 import style from "./show.module.css"
 
-import { useQueryParams, StringParam } from "use-query-params"
+import { useQueryParam, StringParam } from "use-query-params"
 
 const ShowPage = () => {
-  const [id] = useQueryParams("id", StringParam)
+  const [id] = useQueryParam("id", StringParam)
   const [vuistje, setVuistje] = useState(null)
 
   // const vuistje = { from: "from", to: "to", message: "message" }
