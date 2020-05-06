@@ -13,10 +13,6 @@ html {
   box-sizing: inherit;
 }
 
-a:any-link {
-  color: white;
-}
-
 .visually-hidden {
   position: absolute !important;
   height: 1px;
