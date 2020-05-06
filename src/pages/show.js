@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import Content from "../components/content"
-import ShareUrl from "../components/ShareUrl";
+import ShareUrl from "../components/shareUrl"
 
 import Vuist from "../components/vuist"
 import SEO from "../components/seo"
